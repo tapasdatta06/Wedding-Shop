@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <h2>💍 Wedding Shop</h2>
+    <ul>
+      <li><a href="#signup">Signup</a></li>
+      <li><a href="#login">Login</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="modeToggle">🌙 Toggle Mode</button>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <h1>Welcome to Our Wedding Store</h1>
+    <p>Please signup or login to see products</p>
+  </header>
+
+  <!-- Signup Form -->
+  <section id="signup">
+    <h2 class="bb">Signup</h2>
+    <form id="signupForm">
+      <label>Email:</label>
+      <input type="text" id="signupEmail"><br>
+      <label>Password:</label>
+      <input type="password" id="signupPassword"><br>
+      <button type="submit">Signup</button>
+    </form>
+    <p id="signupMessage"></p>
+  </section>
+
+  <!-- Login Form -->
+  <section id="login">
+    <h2 class ="bb">Login</h2>
+    <form id="loginForm">
+      <label>Email:</label>
+      <input type="text" id="email"><br>
+      <label>Password:</label>
+      <input type="password" id="password"><br>
+      <button type="submit">Login</button>
+      <button type="button" onclick="logout()">Logout</button>
+    </form>
+    <p id="loginMessage"></p>
+  </section>
+
+  <!-- Products (Initially Hidden) -->
+  <section id="products" class="product-grid hidden">
+    <h2>Our Products</h2>
+    <div class="grid">
+      <div class="card"><img src="p1.jpg"><h3>Wedding Dress</h3><p>Elegant bridal Shari</p><p>Price: 50000 BDT</p><button onclick="addToCart('Wedding Dress',50000)">Add to Cart</button></div>
+      <div class="card"><img src="p2.jpg"><h3>Groom Suit</h3><p>Classic groom Sherwani</p><p>Price: 70000 BDT</p><button onclick="addToCart('Groom Suit',70000)">Add to Cart</button></div>
+      <div class="card"><img src="p3.jpg"><h3>Wedding Ring</h3><p>Gold diamond ring</p><p>Price: 300000 BDT</p><button onclick="addToCart('Wedding Ring',300000)">Add to Cart</button></div>
+      <div class="card"><img src="p4.jpg"><h3>Bridal Shoes</h3><p>Stylish heels</p><p>Price: 6000 BDT</p><button onclick="addToCart('Bridal Shoes',6000)">Add to Cart</button></div>
+      <div class="card"><img src="p5.jpg"><h3>Wedding Cake</h3><p>6-tier custom cake</p><p>Price: 5000 BDT</p><button onclick="addToCart('Wedding Cake',5000)">Add to Cart</button></div>
+      <div class="card"><img src="p6.jpg"><h3>Flower Bouquet</h3><p>Fresh Flower bouquet</p><p>Price: 2000 BDT</p><button onclick="addToCart('Flower Bouquet',2000)">Add to Cart</button></div>
+      <div class="card"><img src="p7.jpg"><h3>Wedding Invitation</h3><p>Custom printed invites</p><p>Price: 300 BDT</p><button onclick="addToCart('Wedding Invitation',300)">Add to Cart</button></div>
+      <div class="card"><img src="p8.jpg"><h3>Photography Package</h3><p>Full-day coverage</p><p>Price: 35000 BDT</p><button onclick="addToCart('Photography Package',35000)">Add to Cart</button></div>
+      <div class="card"><img src="p9.jpg"><h3>Wedding Decor</h3><p>Stage & hall decoration</p><p>Price: 55000 BDT</p><button onclick="addToCart('Wedding Decor',55000)">Add to Cart</button></div>
+      <div class="card"><img src="p10.jpg"><h3>Music Band</h3><p>Live wedding music</p><p>Price: 120000 BDT</p><button onclick="addToCart('Music Band',120000)">Add to Cart</button></div>
+    </div>
+  </section>
+
+  <!-- Cart -->
+  <section class="cart hidden" id="cartSection">
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>© 2026 Wedding Shop | Contact: info@weddingshop.com</p>
+    <p>Phone : +8801660******</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
